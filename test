@@ -1,0 +1,15 @@
+import pymongo
+
+mongosh "mongodb+srv://nmagee:20oRGqjmo88JOF0k@cluster0.pnxzwgz.mongodb.net"
+
+use gba4fj;
+
+db.grades.insertMany([
+  {name: "Quiz 1", kind:"quiz", numbergrade: 67, letter: "D+"},
+   {name: "Quiz 2", kind:"quiz", numbergrade: 95, letter: "A"},
+    {name: "Quiz 3", kind:"quiz", numbergrade: 93, letter: "A"},
+     {name: "Exam 1", kind:"exam", numbergrade: 100, letter: "A"},
+      {name: "Homework 1", kind:"homework", numbergrade: 86, letter: "B+"},
+]);
+
+db.grades.find({letter:"A"});
